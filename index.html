@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spire Booze</title>
+  <style>
+		body{ 
+			font-family: Serif;
+			background-image: url(liquor.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 100vh;
+		}
+		.container{
+			height: 600px;
+			max-width: 400px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #3F2E3E;
+			opacity: .9;
+			border-radius: 100px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			color: #fff;
+		}
+		h1{
+			margin-top: 20px;
+			font-size: 26px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		h3{ 
+			font-size: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		p{ 
+			font-size: 15.5px;
+			line-height: 1.5;
+		}
+		#shop{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#product {
+			width: 350px;
+			height: 600px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		a{
+			display: inline-block;
+			background-color: #EFE1D1;
+			color: #3F2E3E;
+			text-decoration: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: none;
+			margin-top: 20px;
+		}
+		a:hover {
+      		background-color: red;
+		}
+		form {
+      		padding: 40px;
+		}
+		input {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+		}
+		.footer{
+			text-align: center;
+			margin-top: 20px;
+			color: #FFF;
+		}
+  </style>
+</head>
+	<body>
+		<div class="container" id="shop">
+			<div id="product">
+				<h1><em>- Spire Booze -</em></h1>
+				<h3><i>Rising Spirits, Delivered to Your Doorstep!</i></h3>
+      			<center><p>Please fill in the form below:</p></center>
+					<form>
+						<label for="name">Name:</label>
+							<input id="name" type="text" />
+						<label for="age">Age:</label>
+							<input id="age" type="number" />
+						<center><a id="purchaseButton" href="next.html" onclick="checkAge(event)" class="button">Continue</a></center>
+					</form>
+			</div>
+		</div>
+			<script>
+    			function checkAge(event) {
+      				let name = document.getElementById("name").value;
+      				let age = Number(document.getElementById("age").value);
+
+      			if (age < 21) {
+        			alert("Sorry, you must be 21 or older to make a purchase");
+        			event.preventDefault();
+      				}
+    			}
+		</script>
+		<div class="footer">
+			<p style="font-size: 15.5px">Need help? Contact us or visit <u>spirebooze.com/welp</u></p>
+		</div>
+</body>
+</html>
